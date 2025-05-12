@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: #1f2937;
+}
+
+@layer base {
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-medium tracking-tight;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply px-4 py-2 rounded-md font-medium transition-all duration-300;
+  }
+  
+  .btn-primary {
+    @apply bg-purple-600 text-white hover:bg-purple-700 hover:shadow-lg;
+  }
+  
+  .btn-secondary {
+    @apply border border-purple-200 text-purple-700 hover:border-purple-300;
+  }
+}
+
+/* For smooth section transitions */
+section {
+  transition: all 0.5s ease;
+}
