@@ -1,6 +1,7 @@
 import { Star, Clock, ShoppingCart } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import unitmartImg from '../../assets/unitmart.png';
 
 function AppPreview() {
   const [ref, inView] = useInView({
@@ -59,23 +60,25 @@ function AppPreview() {
   return (
     <section 
       id="app-preview" 
-      className="py-20 bg-gradient-to-b from-violet-50 to-white"
+      className="py-24 bg-gradient-to-b from-violet-50 to-white"
       ref={ref}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col lg:flex-row items-center gap-12">
+        <div className="flex flex-col lg:flex-row items-center gap-20">
           <motion.div 
             variants={phoneVariants}
             initial="hidden"
             animate={inView ? "show" : "hidden"}
-            className="lg:w-1/2 relative"
+            className="lg:w-1/2 flex justify-center"
           >
-            <div className="bg-white p-3 rounded-3xl shadow-xl max-w-xs mx-auto">
-              <div className="bg-gray-100 aspect-[9/16] rounded-2xl overflow-hidden flex items-center justify-center">
-                <div className="text-gray-400 flex flex-col items-center">
-                  <ShoppingCart size={48} strokeWidth={1.5} />
-                  <p className="mt-4 text-sm">App Screenshot</p>
-                </div>
+            <div className="bg-white rounded-[2.5rem] shadow-2xl p-3" style={{ width: 330, height: 650, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              <div className="bg-black rounded-[2rem] overflow-hidden w-full h-full flex items-center justify-center border-4 border-gray-200">
+                <img
+                  src={unitmartImg}
+                  alt="App Screenshot"
+                  className="object-contain w-full h-full"
+                  style={{ background: '#000' }}
+                />
               </div>
             </div>
           </motion.div>
@@ -84,40 +87,28 @@ function AppPreview() {
             variants={container}
             initial="hidden"
             animate={inView ? "show" : "hidden"}
-            className="lg:w-1/2"
+            className="lg:w-1/2 flex flex-col justify-center"
           >
-            <motion.span variants={item} className="inline-block px-3 py-1 rounded-full bg-blue-100 text-blue-700 font-medium text-sm mb-3">
-              App Preview
-            </motion.span>
-            <motion.h2 variants={item} className="text-3xl md:text-4xl font-bold mb-8 text-gray-900">
+            <motion.h2 variants={item} className="text-3xl md:text-4xl font-bold mb-10 text-gray-900">
               Seamless Shopping Experience
             </motion.h2>
 
-            <motion.div variants={container} className="space-y-6">
+            <motion.div variants={container} className="space-y-8">
               {features.map((feature) => (
                 <motion.div 
                   key={feature.id} 
                   variants={item}
-                  className="flex items-start"
+                  className="flex items-start bg-white rounded-xl shadow-sm p-5"
                 >
-                  <div className="h-10 w-10 rounded-full bg-purple-100 flex items-center justify-center mt-1">
+                  <div className="h-12 w-12 rounded-full bg-purple-100 flex items-center justify-center mt-1">
                     {feature.icon}
                   </div>
-                  <div className="ml-4">
+                  <div className="ml-6">
                     <h3 className="text-xl font-semibold mb-1 text-gray-900">{feature.title}</h3>
                     <p className="text-gray-600">{feature.description}</p>
                   </div>
                 </motion.div>
               ))}
-            </motion.div>
-
-            <motion.div variants={item} className="mt-8">
-              <a 
-                href="#demo" 
-                className="inline-block px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white font-medium rounded-md shadow-md hover:shadow-lg transition duration-300"
-              >
-                See Full Demo
-              </a>
             </motion.div>
           </motion.div>
         </div>
