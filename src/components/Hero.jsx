@@ -68,17 +68,10 @@ function Hero() {
             
             <motion.div variants={item} className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
               <a 
-                href="#demo" 
-                className="px-8 py-3 bg-purple-600 hover:bg-purple-700 text-white font-medium rounded-md shadow-md hover:shadow-lg transition duration-300 flex items-center justify-center"
-              >
-                <ShoppingCart size={20} className="mr-2" />
-                Request a Demo
-              </a>
-              <a 
                 href="#for-investors" 
                 className="px-8 py-3 border border-purple-200 hover:border-purple-300 text-purple-700 font-medium rounded-md transition duration-300 flex items-center justify-center"
               >
-                Investor Deck
+                Looking for Investors
               </a>
             </motion.div>
             
@@ -86,12 +79,7 @@ function Hero() {
               variants={item} 
               className="flex items-center justify-center md:justify-start mt-10 space-x-2"
             >
-              {stats.map((stat) => (
-                <div key={stat.id} className={`h-8 w-8 rounded-full bg-purple-${stat.id < 4 ? "600" : "400"} flex items-center justify-center text-white font-bold shadow-sm`}>
-                  {stat.value}
-                </div>
-              ))}
-              <span className="ml-2 text-gray-700 font-medium">500+ retailers already onboarded</span>
+              {/* Removed stats display and "500+ retailers already onboarded" text */}
             </motion.div>
           </div>
           

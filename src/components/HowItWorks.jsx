@@ -81,7 +81,7 @@ function HowItWorks() {
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative"
         >
           {/* Connecting lines for desktop */}
-          <div className="hidden lg:block absolute top-1/4 left-1/4 right-1/4 h-0.5 bg-purple-200" />
+          <div className="hidden lg:block absolute top-8 left-[12.5%] right-[12.5%] h-0.5 bg-purple-200" />
           
           {steps.map((step, index) => (
             <motion.div 
