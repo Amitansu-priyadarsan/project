@@ -4,7 +4,7 @@ function Footer() {
   return (
     <footer id="contact" className="bg-gray-900 text-white pt-16 pb-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-16">
           <div>
             <div className="flex items-center mb-4">
               <div className="h-10 w-10 rounded-full bg-purple-600 flex items-center justify-center text-white font-bold text-xl">
@@ -36,16 +36,6 @@ function Footer() {
               <li><a href="#for-investors" className="text-gray-400 hover:text-white transition duration-300">For Investors</a></li>
               <li><a href="#" className="text-gray-400 hover:text-white transition duration-300">Blog</a></li>
               <li><a href="#" className="text-gray-400 hover:text-white transition duration-300">Careers</a></li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Legal</h3>
-            <ul className="space-y-2">
-              <li><a href="#" className="text-gray-400 hover:text-white transition duration-300">Privacy Policy</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition duration-300">Terms of Service</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition duration-300">Cookie Policy</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition duration-300">GDPR Compliance</a></li>
             </ul>
           </div>
 

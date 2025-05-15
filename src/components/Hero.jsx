@@ -71,7 +71,7 @@ function Hero() {
                 href="#for-investors" 
                 className="px-8 py-3 border border-purple-200 hover:border-purple-300 text-purple-700 font-medium rounded-md transition duration-300 flex items-center justify-center"
               >
-                Looking for Investors
+                Investor Deck
               </a>
             </motion.div>
             

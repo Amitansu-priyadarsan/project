@@ -39,7 +39,7 @@ function ForInvestors() {
     {
       id: 3,
       title: "Strong Team",
-      description: "Founded by experienced entrepreneurs with backgrounds in retail, technology, and supply chain management.",
+      description: "Founded by  young and enthusiastic entrepreneurs with backgrounds in  technology and Engineering.",
       icon: <Users size={24} className="text-purple-600" />
     },
     {
@@ -57,7 +57,7 @@ function ForInvestors() {
     {
       id: 6,
       title: "Traction & Growth",
-      description: "Already operational in 15+ cities with 500+ retail partners and growing at 30% month-over-month in GMV.",
+      description: "Pre-revenue and need funding to scale up the business.",
       icon: <Clock size={24} className="text-purple-600" />
     }
   ];
