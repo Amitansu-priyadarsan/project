@@ -56,8 +56,8 @@ function ForInvestors() {
     },
     {
       id: 6,
-      title: "Traction & Growth",
-      description: "Pre-revenue and need funding to scale up the business.",
+      title: "Pre-revenue",
+      description: "Pre-revenue and raising capital to expand business capabilities and reach. Funding will enable us to accelerate product development, grow our team, and penetrate key markets.",
       icon: <Clock size={24} className="text-purple-600" />
     }
   ];
