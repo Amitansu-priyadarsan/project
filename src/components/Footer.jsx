@@ -53,16 +53,16 @@ function Footer() {
             <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
             <ul className="space-y-3">
               <li className="flex items-start">
-                <Mail size={20} className="text-gray-400 mr-3 mt-1" />
-                <span className="text-gray-400">hello@unimart.com</span>
+                <Mail size={20} className="text-white mr-3 mt-1" />
+                <span className="text-gray-400">anderntechnologies@gmail.com</span>
               </li>
               <li className="flex items-start">
                 <Phone size={20} className="text-gray-400 mr-3 mt-1" />
-                <span className="text-gray-400">+91 (800) 123-4567</span>
+                <span className="text-gray-400">7449324036</span>
               </li>
               <li className="flex items-start">
                 <MapPin size={20} className="text-gray-400 mr-3 mt-1" />
-                <span className="text-gray-400">100 Innovation Way, Bangalore, India</span>
+                <span className="text-gray-400">Office currently remote</span>
               </li>
             </ul>
           </div>
