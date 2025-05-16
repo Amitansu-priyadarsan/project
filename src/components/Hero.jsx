@@ -88,7 +88,7 @@ function Hero() {
             variants={item} 
             className="md:w-1/2 relative"
           >
-            <div className="bg-gray-100 rounded-lg shadow-lg overflow-hidden p-2">
+            <div className="bg-gray-100 rounded-lg shadow-lg overflow-hidden p-0">
               <img
                 src={paperbagImg}
                 alt="PaperBag App Preview"
