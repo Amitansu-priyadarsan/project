@@ -79,7 +79,7 @@ function ForInvestors() {
             For Investors
           </motion.span>
           <motion.h2 variants={item} className="text-3xl md:text-4xl font-bold mb-6">
-            Why Invest in <span className="text-purple-600">UniMart</span>
+            Why Invest in <span className="text-purple-600">PaperBag</span>
           </motion.h2>
           <motion.p variants={item} className="text-gray-600 max-w-2xl mx-auto text-lg">
             A unique opportunity to be part of the future of retail commerce in India.

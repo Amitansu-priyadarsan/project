@@ -67,7 +67,7 @@ function HowItWorks() {
             Simple Process
           </motion.span>
           <motion.h2 variants={item} className="text-3xl md:text-4xl font-bold mb-6">
-            How <span className="text-purple-600">UniMart</span> Works
+            How <span className="text-purple-600">PaperBag</span> Works
           </motion.h2>
           <motion.p variants={item} className="text-gray-600 max-w-2xl mx-auto text-lg">
             Our platform makes shopping easier than ever with a simple four-step process.

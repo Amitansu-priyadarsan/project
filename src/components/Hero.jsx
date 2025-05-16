@@ -1,6 +1,7 @@
 import { ShoppingCart } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import paperbagImg from '../../assets/paperbag.png';
 
 function Hero() {
   const [ref, inView] = useInView({
@@ -87,13 +88,12 @@ function Hero() {
             variants={item} 
             className="md:w-1/2 relative"
           >
-            <div className="aspect-[4/3] bg-gray-100 rounded-lg shadow-lg overflow-hidden p-4">
-              <div className="w-full h-full bg-gray-200 rounded flex items-center justify-center">
-                <div className="text-gray-400 flex flex-col items-center">
-                  <ShoppingCart size={48} strokeWidth={1.5} />
-                  <p className="mt-4 text-sm">App Preview Image</p>
-                </div>
-              </div>
+            <div className="bg-gray-100 rounded-lg shadow-lg overflow-hidden p-2">
+              <img
+                src={paperbagImg}
+                alt="PaperBag App Preview"
+                className="w-full h-auto object-contain rounded" 
+              />
             </div>
           </motion.div>
         </motion.div>

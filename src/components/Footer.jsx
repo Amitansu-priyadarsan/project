@@ -1,4 +1,5 @@
 import { Mail, Phone, MapPin, Linkedin, Twitter, Instagram } from 'lucide-react';
+import paperBagLogo from '../../assets/logo.png';
 
 function Footer() {
   return (
@@ -7,10 +8,8 @@ function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-16">
           <div>
             <div className="flex items-center mb-4">
-              <div className="h-10 w-10 rounded-full bg-purple-600 flex items-center justify-center text-white font-bold text-xl">
-                U
-              </div>
-              <span className="ml-2 text-2xl font-bold text-white">UniMart</span>
+              <img src={paperBagLogo} alt="PaperBag Logo" className="h-8 w-auto mr-2" />
+              <span className="text-2xl font-bold text-white">PaperBag</span>
             </div>
             <p className="text-gray-400 mb-4">
               Unifying commerce under one platform to create a seamless shopping experience.
@@ -60,7 +59,7 @@ function Footer() {
 
         <div className="pt-8 border-t border-gray-800">
           <p className="text-center text-gray-500 text-sm">
-            &copy; {new Date().getFullYear()} UniMart. All rights reserved.
+            &copy; {new Date().getFullYear()} PaperBag. All rights reserved.
           </p>
         </div>
       </div>

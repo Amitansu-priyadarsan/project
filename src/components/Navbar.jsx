@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { Menu, X, ShoppingCart } from 'lucide-react';
 import { motion } from 'framer-motion';
+import paperBagLogo from '../../assets/logo.png'; // Import the new logo
 
 function Navbar({ scrollY }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -69,11 +70,8 @@ function Navbar({ scrollY }) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
-            <a href="#" className="flex items-center" aria-label="UniMart Home">
-              <div className="h-10 w-10 rounded-full bg-purple-600 flex items-center justify-center text-white font-bold text-xl">
-                U
-              </div>
-              <span className="ml-2 text-2xl font-bold text-purple-600">UniMart</span>
+            <a href="#" className="flex items-center" aria-label="PaperBag Home">
+              <img src={paperBagLogo} alt="PaperBag Logo" className="h-12 w-auto" />
             </a>
           </div>
 
