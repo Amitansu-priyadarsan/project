@@ -49,7 +49,8 @@ function Footer() {
               </li>
               <li className="flex items-start">
                 <MapPin size={20} className="text-white mr-3 mt-1" />
-                <span className="text-gray-400">Office currently remote</span>
+                <span className="text-gray-400"> 2, Tarapada Chatterjee LnShibpur, Howrah, West Bengal 711103
+                </span>
               </li>
             </ul>
           </div>

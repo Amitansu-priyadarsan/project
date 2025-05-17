@@ -1,7 +1,8 @@
 import { useState, useEffect, useRef } from 'react';
-import { Menu, X, ShoppingCart } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { Menu, X } from 'lucide-react';
 import { motion } from 'framer-motion';
-import paperBagLogo from '../../assets/logo2.png'; // Import the new logo
+import paperBagLogo from '../../assets/logo2.png';
 
 function Navbar({ scrollY }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -17,18 +18,24 @@ function Navbar({ scrollY }) {
         lastScrollY.current = window.scrollY;
         return;
       }
+      // Only apply hide/show logic if not on a page that might be shorter than scroll threshold
+      // This check can be improved by knowing which routes are long/short
+      // For now, let's assume ContactUs page might be short
+      if (window.location.pathname.startsWith('/contact') || window.location.pathname.startsWith('/invest')) {
+        setShowNavbar(true);
+        lastScrollY.current = window.scrollY;
+        return;
+      }
       if (window.scrollY > lastScrollY.current) {
-        // Scrolling down
         setShowNavbar(false);
       } else {
-        // Scrolling up
         setShowNavbar(true);
       }
       lastScrollY.current = window.scrollY;
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, []); // scrollY removed from dependencies to avoid issues with path changes
 
   // Close mobile menu when clicking a link
   const handleNavLinkClick = () => {
@@ -64,37 +71,38 @@ function Navbar({ scrollY }) {
       animate={{ y: showNavbar ? 0 : -100 }}
       transition={{ duration: 0.3 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-white/80 backdrop-blur shadow-md' : 'bg-transparent'
+        isScrolled || isMenuOpen ? 'bg-white/80 backdrop-blur shadow-md' : 'bg-transparent'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center mt-2">
-            <a href="#" className="flex items-center" aria-label="PaperBag Home">
+            <Link to="/" className="flex items-center" aria-label="PaperBag Home" onClick={handleNavLinkClick}>
               <img src={paperBagLogo} alt="PaperBag Logo" className="h-16 w-auto" />
-            </a>
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-4">
-            <a href="#features" className="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">
+            <Link to="/?section=features" className="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors" onClick={handleNavLinkClick}>
               Features
-            </a>
-            <a href="#how-it-works" className="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">
+            </Link>
+            <Link to="/?section=how-it-works" className="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors" onClick={handleNavLinkClick}>
               How It Works
-            </a>
-            <a href="#for-investors" className="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">
+            </Link>
+            <Link to="/?section=for-investors" className="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors" onClick={handleNavLinkClick}>
               For Investors
-            </a>
-            <a href="#contact" className="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">
-              Contact
-            </a>
-            <a 
-              href="#demo" 
+            </Link>
+            <Link to="/contact" className="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors" onClick={handleNavLinkClick}>
+              Contact Us
+            </Link>
+            <Link 
+              to="/invest" 
               className="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors shadow-md hover:shadow-lg"
+              onClick={handleNavLinkClick}
             >
-              Invest Us
-            </a>
+              Invest
+            </Link>
           </div>
 
           {/* Mobile menu button */}
@@ -121,41 +129,41 @@ function Navbar({ scrollY }) {
           className="md:hidden bg-white shadow-lg"
         >
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            <a 
-              href="#features" 
+            <Link 
+              to="/?section=features" 
               className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-purple-600 hover:bg-purple-50"
               onClick={handleNavLinkClick}
             >
               Features
-            </a>
-            <a 
-              href="#how-it-works" 
+            </Link>
+            <Link 
+              to="/?section=how-it-works" 
               className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-purple-600 hover:bg-purple-50"
               onClick={handleNavLinkClick}
             >
               How It Works
-            </a>
-            <a 
-              href="#for-investors" 
+            </Link>
+            <Link 
+              to="/?section=for-investors" 
               className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-purple-600 hover:bg-purple-50"
               onClick={handleNavLinkClick}
             >
               For Investors
-            </a>
-            <a 
-              href="#contact" 
+            </Link>
+            <Link 
+              to="/contact" 
               className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-purple-600 hover:bg-purple-50"
               onClick={handleNavLinkClick}
             >
-              Contact
-            </a>
-            <a 
-              href="#demo" 
+              Contact Us
+            </Link>
+            <Link 
+              to="/invest" 
               className="block w-full text-center px-3 py-2 rounded-md text-base font-medium bg-purple-600 text-white hover:bg-purple-700"
               onClick={handleNavLinkClick}
             >
-              Get Demo
-            </a>
+              Invest
+            </Link>
           </div>
         </motion.div>
       )}
