@@ -1,5 +1,5 @@
 import { Mail, Phone, MapPin, Linkedin, Twitter, Instagram } from 'lucide-react';
-import paperBagLogo from '../../assets/logo.png';
+import paperBagLogo from '../../assets/logo1.png';
 
 function Footer() {
   return (
@@ -8,7 +8,7 @@ function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-16">
           <div>
             <div className="flex items-center mb-4">
-              <img src={paperBagLogo} alt="PaperBag Logo" className="h-8 w-auto mr-2" />
+              
               <span className="text-2xl font-bold text-white">PaperBag</span>
             </div>
             <p className="text-gray-400 mb-4">

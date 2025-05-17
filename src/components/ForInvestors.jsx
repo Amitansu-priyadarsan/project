@@ -114,7 +114,9 @@ function ForInvestors() {
           className="mt-12 text-center"
         >
           <a 
-            href="#" 
+            href="https://drive.google.com/file/d/1ER35qnIHNTgjVMYCMu1sT10iOxSDEOIi/view?usp=sharing" 
+            target="_blank" 
+            rel="noopener noreferrer"
             className="inline-block px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white font-medium rounded-md shadow-md hover:shadow-lg transition duration-300"
           >
             Download Investor Deck

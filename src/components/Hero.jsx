@@ -69,7 +69,9 @@ function Hero() {
             
             <motion.div variants={item} className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
               <a 
-                href="#for-investors" 
+                href="https://drive.google.com/file/d/1ER35qnIHNTgjVMYCMu1sT10iOxSDEOIi/view?usp=sharing" 
+                target="_blank" 
+                rel="noopener noreferrer"
                 className="px-8 py-3 border border-purple-200 hover:border-purple-300 text-purple-700 font-medium rounded-md transition duration-300 flex items-center justify-center"
               >
                 Investor Deck
