@@ -1,17 +1,15 @@
 import { Mail, Phone, MapPin, Linkedin, Twitter, Instagram } from 'lucide-react';
-import paperBagLogo from '../../assets/logo1.png';
 
 function Footer() {
   return (
-    <footer id="contact" className="bg-gray-900 text-white pt-16 pb-8">
+    <footer id="contact" className="bg-gray-900 text-white pt-20 pb-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
           <div>
-            <div className="flex items-center mb-4">
-              
+            <div className="flex items-center mb-6">
               <span className="text-2xl font-bold text-white">PaperBag</span>
             </div>
-            <p className="text-gray-400 mb-4">
+            <p className="text-gray-400 mb-6">
               Unifying commerce under one platform to create a seamless shopping experience.
             </p>
             <div className="flex space-x-4">
@@ -28,8 +26,8 @@ function Footer() {
           </div>
 
           <div>
-            <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
-            <ul className="space-y-2">
+            <h3 className="text-xl font-semibold text-gray-100 mb-6">Quick Links</h3>
+            <ul className="space-y-3">
               <li><a href="#features" className="text-gray-400 hover:text-white transition duration-300">Features</a></li>
               <li><a href="#how-it-works" className="text-gray-400 hover:text-white transition duration-300">How It Works</a></li>
               <li><a href="#for-investors" className="text-gray-400 hover:text-white transition duration-300">For Investors</a></li>
@@ -39,18 +37,18 @@ function Footer() {
           </div>
 
           <div>
-            <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
+            <h3 className="text-xl font-semibold text-gray-100 mb-6">Contact Us</h3>
             <ul className="space-y-3">
               <li className="flex items-start">
                 <Mail size={20} className="text-white mr-3 mt-1" />
                 <span className="text-gray-400">anderntechnologies@gmail.com</span>
               </li>
               <li className="flex items-start">
-                <Phone size={20} className="text-gray-400 mr-3 mt-1" />
+                <Phone size={20} className="text-white mr-3 mt-1" />
                 <span className="text-gray-400">7449324036</span>
               </li>
               <li className="flex items-start">
-                <MapPin size={20} className="text-gray-400 mr-3 mt-1" />
+                <MapPin size={20} className="text-white mr-3 mt-1" />
                 <span className="text-gray-400">Office currently remote</span>
               </li>
             </ul>
