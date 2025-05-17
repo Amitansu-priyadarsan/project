@@ -84,6 +84,9 @@ function Navbar({ scrollY }) {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-4">
+            <Link to="/" className="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors" onClick={handleNavLinkClick}>
+              Home
+            </Link>
             <Link to="/?section=features" className="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors" onClick={handleNavLinkClick}>
               Features
             </Link>
@@ -129,8 +132,15 @@ function Navbar({ scrollY }) {
           className="md:hidden bg-white shadow-lg"
         >
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            <Link 
-              to="/?section=features" 
+            <Link
+              to="/"
+              className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-purple-600 hover:bg-purple-50"
+              onClick={handleNavLinkClick}
+            >
+              Home
+            </Link>
+            <Link
+              to="/?section=features"
               className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-purple-600 hover:bg-purple-50"
               onClick={handleNavLinkClick}
             >
@@ -162,7 +172,7 @@ function Navbar({ scrollY }) {
               className="block w-full text-center px-3 py-2 rounded-md text-base font-medium bg-purple-600 text-white hover:bg-purple-700"
               onClick={handleNavLinkClick}
             >
-              Invest
+              Invest Now
             </Link>
           </div>
         </motion.div>

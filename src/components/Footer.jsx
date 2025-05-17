@@ -12,17 +12,7 @@ function Footer() {
             <p className="text-gray-400 mb-6">
               Unifying commerce under one platform to create a seamless shopping experience.
             </p>
-            <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-white transition duration-300">
-                <Twitter size={20} />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white transition duration-300">
-                <Linkedin size={20} />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white transition duration-300">
-                <Instagram size={20} />
-              </a>
-            </div>
+            
           </div>
 
           <div>
