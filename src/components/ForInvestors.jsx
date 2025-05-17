@@ -57,7 +57,7 @@ function ForInvestors() {
     {
       id: 6,
       title: "Pre-revenue",
-      description: "Pre-revenue and raising capital to expand business capabilities and reach. Funding will enable us to accelerate product development, grow our team, and penetrate key markets.",
+      description: "Pre-revenue and seeking funding to accelerate development, expand the team, and enter key markets.",
       icon: <Clock size={24} className="text-purple-600" />
     }
   ];
