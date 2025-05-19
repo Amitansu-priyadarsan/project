@@ -65,14 +65,14 @@ const ContactUs = () => {
               </h2>
               <div className="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 h-full flex flex-col">
                 <address className="text-lg text-gray-700 not-italic leading-relaxed">
-                  2 Tarapada Chatterjee Lane
+                  24/1/7 Circular Road 2nd by Lane, 
                   <br />
                   Howrah, Kolkata
                   <br />
-                  West Bengal, India, 711104
+                  West Bengal, India, 711103
                 </address>
                  <a 
-                  href="https://maps.google.com/?q=2 Tarapada Chatterjee Lane, Howrah, Kolkata, West Bengal, India, 711104" 
+                  href="https://maps.google.com/?q=24/1/7 Tarapada Chatterjee Lane, Howrah, Kolkata, West Bengal, India, 711104" 
                   target="_blank" 
                   rel="noopener noreferrer" 
                   className="mt-auto pt-4 inline-flex items-center text-purple-600 hover:text-purple-800 transition-colors duration-300"
